@@ -2,3 +2,13 @@ name: название шаблона
 description: описание шаблона
 title: "[Ошибка]: "
 labels: ["bug"]
+body:
+  - type: textarea
+    id: идентификатор поля ввода
+    attributes:
+      label: подпись поля
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true 
+
