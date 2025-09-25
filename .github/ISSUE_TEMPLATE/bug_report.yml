@@ -11,4 +11,25 @@ body:
       placeholder: подсказка
     validations:
       required: true 
-
+  - type: dropdown
+   id: идентификатор поля ввода
+   attributes:
+     label: подпись поля
+     description: описание
+     options:
+     - список
+     - опций
+   validations:
+     required: true
+  - type: markdown
+   attributes:
+     value: |
+       Отобразить текст с разметкой markdown
+   - type: checkboxes
+   id: идентификатор поля ввода
+   attributes:
+     label: подпись
+     description: описание
+     options:
+     - label: флажок 1
+     required: true #флажок обязателен или нет
