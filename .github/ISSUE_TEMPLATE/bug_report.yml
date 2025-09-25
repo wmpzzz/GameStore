@@ -1,35 +1,78 @@
-name: название шаблона
-description: описание шаблона
-title: "[Ошибка]: "
-labels: ["bug"]
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
 body:
   - type: textarea
-    id: идентификатор поля ввода
+    id: what-happened
     attributes:
-      label: подпись поля
-      description: описание
-      placeholder: подсказка
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
-      required: true 
+      required: true
+  - type: textarea
+    id: placement
+    attributes:
+      label: Placement
+      description: Where is the bug located?
+      placeholder: Location of the bug
+    validations:
+      required: false
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions
+      description: Suggest your solution to the problem
+      placeholder: Write a correction here
+      value: "correction"
+    validations:
+      required: false
   - type: dropdown
-   id: идентификатор поля ввода
-   attributes:
-     label: подпись поля
-     description: описание
-     options:
-     - список
-     - опций
-   validations:
-     required: true
-  - type: markdown
-   attributes:
-     value: |
-       Отобразить текст с разметкой markdown
-   - type: checkboxes
-   id: идентификатор поля ввода
-   attributes:
-     label: подпись
-     description: описание
-     options:
-     - label: флажок 1
-     required: true #флажок обязателен или нет
+    id: seriousness
+    attributes:
+      label: Seriousness
+      description: How serious is the problem?
+      options:
+        - Blocker
+        - Critical
+        - Major
+        - Trivial
+        - Enhancement
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: In what order should the bugs be fixed?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: BugType
+      description: What category does the problem belong to?
+      options:
+        - Functional
+        - UI
+        - Localization
+        - Performance
+        - Security
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our terms. 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
