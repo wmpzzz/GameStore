@@ -3,7 +3,7 @@ description: описание шаблона
 title: "[Ошибка]: "
 labels: ["bug"]
 body:
-  - type: textarea
+   type: textarea
   id: идентификатор поля ввода
   attributes:
     label: подпись поля
@@ -11,7 +11,7 @@ body:
     placeholder: подсказка
   validations:
   required: true #поле обязательно для заполнения
-  - type: dropdown
+   type: dropdown
   id: идентификатор поля ввода
     attributes:
       label: подпись поля
@@ -21,15 +21,15 @@ body:
       - опций
   validations:
   required: true
-  - type: markdown
+   type: markdown
     attributes:
       value: |
         Отобразить текст с разметкой markdown
-  - type: checkboxes
+   type: checkboxes
   id: идентификатор поля ввода
   attributes:
     label: подпись
     description: описание
     options:
-      - label: флажок 1
+       label: флажок 1
   required: true #флажок обязателен или нет
