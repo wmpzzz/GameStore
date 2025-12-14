@@ -1,78 +1,71 @@
-name: Bug Report
-description: File a bug report.
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: "bug repory"
+description: "issue to create bug report"
+title: "[Ошибка]:"
+labels: ["bug"]
 body:
   - type: textarea
-    id: what-happened
+    id: rep_desc
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: "Описание ошибки"
+      placeholder: "ошибка заключается в том что..."
     validations:
       required: true
   - type: textarea
-    id: placement
+    id: steps
     attributes:
-      label: Placement
-      description: Where is the bug located?
-      placeholder: Location of the bug
+      label: "Шаги воспроизведения"
+      placeholder: "что нужно сделать, чтобы вопспроизвести ошибку"
     validations:
-      required: false
+      required: true
   - type: textarea
-    id: suggestions
+    id: expected
     attributes:
-      label: Suggestions
-      description: Suggest your solution to the problem
-      placeholder: Write a correction here
-      value: "correction"
+      label: "Ожидаемый результат"
+      placeholder: "что должно произойти"
     validations:
-      required: false
-  - type: dropdown
-    id: seriousness
+      required: true
+  - type: textarea
+    id: actual
     attributes:
-      label: Seriousness
-      description: How serious is the problem?
-      options:
-        - Blocker
-        - Critical
-        - Major
-        - Trivial
-        - Enhancement
+      label: "Фактический результат"
+      placeholder: "что происходит в итоге"
     validations:
       required: true
   - type: dropdown
-    id: priority
+    id: environment
     attributes:
-      label: Priority
-      description: In what order should the bugs be fixed?
+      label: "Среда выполнения"
       options:
-        - Critical
-        - High
-        - Medium
-        - Low
+        - Windows 11
+        - Windows 10
+        - Ubuntu
+        - Debian
+        - macOS
+        - Android 16
+        - Android 15
+        - iOS 26
+        - iOS 18
+        - FreeBSD
     validations:
       required: true
   - type: dropdown
-    id: bug-type
+    id: lowpriority
     attributes:
-      label: BugType
-      description: What category does the problem belong to?
+      label: "Приоритет"
       options:
-        - Functional
-        - UI
-        - Localization
-        - Performance
-        - Security
-        - Other
+        - Высокий
+        - Средний
+        - Низкий
     validations:
       required: true
-  - type: checkboxes
-    id: terms
+  - type: dropdown
+    id: severity
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our terms. 
+      label: "Серьёзность"
       options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+        - Высокая
+        - Средняя
+        - Низкая
+        - Критическая
+    validations:
+      required: true
